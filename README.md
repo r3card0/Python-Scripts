@@ -1,6 +1,6 @@
-Python Scripts
+# Python Scripts
 
-This is a personal project to share all python scripts that I created for various purposes
+This is a personal project to share all python scripts that I'm creating for various purposes
 
 
 Objectives:

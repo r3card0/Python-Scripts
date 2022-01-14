@@ -1,5 +1,5 @@
 # this is a challenge created in Python Basic Course
-# create a currency converter from dollars to local currency
+# create a currency converter from dollars to local currency.
 
 dollars = input("Please, enter your amount in dollars: ")
 dollars = float(dollars)

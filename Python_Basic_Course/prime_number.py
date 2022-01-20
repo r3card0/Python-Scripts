@@ -1,4 +1,6 @@
-# imprimir numeros primos
+# Evaluates if a given number by the user it's prime number or it's not
+
+# (2) prime number expression
 def prime_number(number):
     counter = 0
 
@@ -12,7 +14,7 @@ def prime_number(number):
     else:
         return False
 
-
+# (1) user input
 def enter_a_number():
     number = int(input("Enter a number: "))
     if prime_number(number):

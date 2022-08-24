@@ -1,21 +1,19 @@
-# Python Scripts
+# Using Python with Excel files
 
-This is a personal project to share all python scripts that I'm creating for various purposes
+This is a learning about how to use **openpyxl** library to manage excel files such as xlsx, txt and csv formats
 
 
 Objectives:
 
-- Practice Python programming language
-- Learn from others programers and projects
-- Share scripts for educational purposes
+- Learn how to:
+1. Load and save excel files
+2. View and inspecting data
+3. Filter and sort
+4. clean data
 
-Technology:
-- VSCode to create scripts
-- Terminal to run the programs
-- pip to create virtual environments
-- Python 3.10
+commands:
+- read_csv, read_excel, loc,iloc,groupby, sort_values, drop
 
 
-Language:
--  English
+
 

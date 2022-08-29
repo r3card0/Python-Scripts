@@ -14,9 +14,9 @@ def add_hdr():
 
     return df_csv
 
-def new_column():
-    new_column = input('Type the name of the new column: ')
-    return new_column
+def column_name():
+    column_name = input('Type the name of the new column: ')
+    return column_name
 
 def expression():
     new_expression = input('Type the expression to calculate result: ')

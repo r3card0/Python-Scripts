@@ -1,13 +1,8 @@
-# enlistar df
-# elegir columna
-# elegir property
-# print all values with property in column
-
+# This program returns values by selecting
+# a property taken from a column
 
 import pandas as pd
 from openpyxl.workbook import workbook
-
-# df.loc[df['column_name'] == 'property value']
 
 def add_hdr():
     column_names = ['First','Last', 'Address','City','State','Area Code','Income']
@@ -27,13 +22,10 @@ def menu():
     message = f"""
     Columns list: {columns_list}
     """
-
     return message
 
 def select_column():
-    print(menu())
     column_selected = input("Select a column: ")
-
     return column_selected
 
 def column_values():
@@ -41,27 +33,29 @@ def column_values():
     column = select_column()
     values = df[column].unique()
     message = f'The values of {column} are: {values}'
-
     return message
-# lista las propiedades de la columna elegida
 
-def select_value():
-    values = print(column_values())    
-    value_selected = input(f"Select a value: ")
-
+def select_value():   
+    value_selected = input("Select a value: ")
     return value_selected
 
 def print_data():
     # df.loc[df['column_name'] == 'property value']
-    df =add_hdr()
-    column = select_column()
+    df = add_hdr()
+    print(menu())
+    column = select_column() 
+    
+    values = df[column].unique()
+    message = f'The values of {column} are: {values}'
+    print(message)
+
     value = select_value()
     data = df.loc[df[column] == value]
 
     return data
 
 def run():
-    print(select_value())
+    print(print_data())
 
 if __name__ == "__main__":
     run()

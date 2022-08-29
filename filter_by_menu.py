@@ -46,8 +46,8 @@ def column_values():
 # lista las propiedades de la columna elegida
 
 def select_value():
-    column = select_column()    
-    value_selected = input(f"Select a {column}: ")
+    values = print(column_values())    
+    value_selected = input(f"Select a value: ")
 
     return value_selected
 
@@ -61,7 +61,7 @@ def print_data():
     return data
 
 def run():
-    print(column_values())
+    print(select_value())
 
 if __name__ == "__main__":
     run()

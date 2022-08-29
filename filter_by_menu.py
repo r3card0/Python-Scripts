@@ -7,6 +7,8 @@
 import pandas as pd
 from openpyxl.workbook import workbook
 
+# df.loc[df['column_name'] == 'property value']
+
 def add_hdr():
     column_names = ['First','Last', 'Address','City','State','Area Code','Income']
     df_csv = pd.read_csv('Exercise_Files/Names.csv', header=None)
@@ -14,15 +16,24 @@ def add_hdr():
 
     return df_csv
 
-def select_column():
+
+
+def columns():
     df_csv = add_hdr()
     columns_list = list(df_csv.columns)
 
     return columns_list
 
+def menu():
+    columns_list = columns()
+    message = f"""
+    Columns list: {columns_list}
+    """
+
+    return message
 
 def run():
-    print(select_column())
+    print(menu())
 
 if __name__ == "__main__":
     run()

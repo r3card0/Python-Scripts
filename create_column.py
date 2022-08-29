@@ -31,9 +31,19 @@ def columns():
     columns_list = list(df_csv.columns)
     return columns_list
 
+# df[new_column] = df[column].apply(lambda x: math expression)
+def new_column():
+    df = add_hdr()
+    col_name = column_name()
+    print(columns())
+    col_selected = select_column()
+    new_expression = expression()
+    df[col_name] = df[col_selected].apply(new_expression)
+
+    return df
 
 def run():
-    print(columns())
+    print(new_column())
 
 
 if __name__ == "__main__":

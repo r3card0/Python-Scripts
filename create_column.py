@@ -22,9 +22,18 @@ def expression():
     new_expression = input('Type the expression to calculate result: ')
     return new_expression
 
+def select_column():
+    column_selected = input("Select a column: ")
+    return column_selected
+
+def columns():
+    df_csv = add_hdr()
+    columns_list = list(df_csv.columns)
+    return columns_list
+
 
 def run():
-    print(expression())
+    print(columns())
 
 
 if __name__ == "__main__":

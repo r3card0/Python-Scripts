@@ -16,8 +16,6 @@ def add_hdr():
 
     return df_csv
 
-
-
 def columns():
     df_csv = add_hdr()
     columns_list = list(df_csv.columns)
@@ -32,8 +30,21 @@ def menu():
 
     return message
 
-def run():
+def select_column():
     print(menu())
+    column_selected = input("Select a column: ")
+
+    return column_selected
+
+
+def print_data():
+    # df.loc[df['column_name'] == 'property value']
+    df =add_hdr()
+    column = select_column()
+    df.loc[df[column] == 0]
+
+def run():
+    print(select_column())
 
 if __name__ == "__main__":
     run()

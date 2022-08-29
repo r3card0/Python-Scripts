@@ -14,8 +14,13 @@ def add_hdr():
 
     return df_csv
 
+def new_column():
+    new_column = input('Type the name of the new column: ')
+    return new_column
+
+
 def run():
-    print(add_hdr())
+    print(new_column())
 
 
 if __name__ == "__main__":

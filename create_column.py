@@ -3,8 +3,10 @@ from openpyxl.workbook import workbook
 
 def description():
     program_description = """
-    How to create a column which storage as a result of a calculation
+    This program creates a new column by applying a function to an existing column
     """
+    return program_description
+
 # df[new_column] = df[column].apply(lambda x: math expression)
 
 def add_hdr():
@@ -33,12 +35,13 @@ def columns():
 
 # df[new_column] = df[column].apply(lambda x: math expression)
 def new_column():
+    print(description())
     df = add_hdr()
     col_name = column_name()
     print(columns())
     col_selected = select_column()
-    new_expression = expression()
-    df[col_name] = df[col_selected].apply(new_expression)
+    #new_expression = expression()
+    df[col_name] = df[col_selected].apply(lambda x: 0.15 if 10000 < x < 40000 else 0.2 if 40000 < x < 80000 else 0.25)
 
     return df
 

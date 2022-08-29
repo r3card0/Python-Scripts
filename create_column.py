@@ -18,9 +18,13 @@ def new_column():
     new_column = input('Type the name of the new column: ')
     return new_column
 
+def expression():
+    new_expression = input('Type the expression to calculate result: ')
+    return new_expression
+
 
 def run():
-    print(new_column())
+    print(expression())
 
 
 if __name__ == "__main__":

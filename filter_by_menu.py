@@ -36,6 +36,13 @@ def select_column():
 
     return column_selected
 
+def column_values():
+    df = add_hdr()
+    column = select_column()
+    values = df[column].unique()
+
+    return values
+# lista las propiedades de la columna elegida
 
 def print_data():
     # df.loc[df['column_name'] == 'property value']
@@ -44,7 +51,7 @@ def print_data():
     df.loc[df[column] == 0]
 
 def run():
-    print(select_column())
+    print(column_values())
 
 if __name__ == "__main__":
     run()

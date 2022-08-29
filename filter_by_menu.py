@@ -40,15 +40,25 @@ def column_values():
     df = add_hdr()
     column = select_column()
     values = df[column].unique()
+    message = f'The values of {column} are: {values}'
 
-    return values
+    return message
 # lista las propiedades de la columna elegida
+
+def select_value():
+    column = select_column()    
+    value_selected = input(f"Select a {column}: ")
+
+    return value_selected
 
 def print_data():
     # df.loc[df['column_name'] == 'property value']
     df =add_hdr()
     column = select_column()
-    df.loc[df[column] == 0]
+    value = select_value()
+    data = df.loc[df[column] == value]
+
+    return data
 
 def run():
     print(column_values())

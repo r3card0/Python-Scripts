@@ -4,6 +4,7 @@ from openpyxl.workbook import workbook
 def description():
     program_description = """
     This program creates a new column by applying a function to an existing column
+    Function -> lambda x: 0.15 if 10000 < x < 40000 else 0.2 if 40000 < x < 80000 else 0.25
     """
     return program_description
 

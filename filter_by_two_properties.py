@@ -23,6 +23,10 @@ def column01():
     col_01 = choose_column()
     return col_01
 
+def column02():
+    col_01 = choose_column()
+    return col_01
+
 def choose_column01():
     col_01 = 'City'
     return col_01
@@ -31,10 +35,17 @@ def choose_column02():
     col_01 = 'First'
     return col_01
 
+def column01_values():
+    column = column01()
+    values = df[column].unique()
+    message = f'The values of {column} are: {values}'
+    return message
+
 # Filter
 def filter_data():
-    col_01 = choose_column01()
-    col_02 = choose_column02()
+    col_01 = column01()
+    #print(column01_values())
+    col_02 = column02()
     data = df.loc[(df[col_01] == 'Riverside') & (df[col_02] == 'John')]
     return data 
 

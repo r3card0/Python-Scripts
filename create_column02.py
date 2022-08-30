@@ -42,11 +42,11 @@ def column_name_2():
     return column_name
 
 def select_column_1():
-    column_selected_1 = input("Select a column: ")
+    column_selected_1 = input("Select first one column: ")
     return column_selected_1
 
 def select_column_2():
-    column_selected_2 = input("Select a column: ")
+    column_selected_2 = input("Select second one column: ")
     return column_selected_2
 
 # df[new_column] = df[column01] * df[column02]
